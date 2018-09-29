@@ -19,6 +19,6 @@ const file = fs.readFileSync('/Users/tru/Desktop/.../movies/ed/calculus-strang/T
 console.time('1')
 
 for(let i=0; i< file.length; i++)
-    file[0] + 1
+    Math.exp(file[0] + 1) * Math.sin(2* Math.PI * i)
 
 console.timeEnd('1')
