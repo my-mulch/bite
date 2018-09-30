@@ -1,24 +1,12 @@
-
 export default class ByteReader {
+
     constructor(props) {
-        this.bytes = props.bytes
-        this.head = props.head || 0
-        this.format = props.format
-        this.base = props.base
+        this.file = props.file
+        this.head = 0
     }
 
-    isEmpty() { return this.head >= this.bytes.length }
-    peek() { return this.bytes[this.head] }
-    read(bytes = 1) { this.bytes[head++] }
+    read() { return this.file[this.head++] } // twice as slow as direct access
+    isEmpty() { return this.head >= this.file.length }
+    peek() { return this.file[this.head] }
+
 }
-
-import fs from 'fs'
-
-const file = fs.readFileSync('/Users/tru/Desktop/.../movies/ed/calculus-strang/The\ Exponential\ Function-oo1ZZlvT2LQ.webm')
-
-console.time('1')
-
-for(let i=0; i< file.length; i++)
-    Math.exp(file[0] + 1) * Math.sin(2* Math.PI * i)
-
-console.timeEnd('1')
