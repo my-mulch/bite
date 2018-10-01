@@ -21,7 +21,7 @@ export default class ByteReader {
     isEmpty() { return this.head >= this.bytes.length }
     peek() { return this.bytes[this.head] }
 
-    pastMarker() { return this.head >= this.markers[this.markers.length - 1] ? false : this.markers.pop() }
+    pastMarker() { console.log(this.head); console.log(this.markers[this.markers.length - 1]) }
     setMarker(marker) { this.markers.push(this.head + marker) }
     popMarker() { return this.markers.pop() }
 
