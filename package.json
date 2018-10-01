@@ -1,6 +1,6 @@
 {
   "name": "biteme",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A customizable byte reader that noms Uint8Arrays",
   "main": "index.js",
   "scripts": {
