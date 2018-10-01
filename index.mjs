@@ -2,7 +2,7 @@ export default class ByteReader {
 
     constructor(props) {
         this.bytes = props.bytes
-        this.markers = props.markers
+        this.markers = props.markers || []
         this.head = 0
     }
 
