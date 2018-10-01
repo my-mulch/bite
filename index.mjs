@@ -1,11 +1,12 @@
 export default class ByteReader {
 
     constructor(props) {
-        this.file = props.file
+        this.bytes = props.bytes
+        this.markers = props.markers
         this.head = 0
     }
 
-    static leadingZeros(byte) {
+    static leadingZeros(byte) { // winner of the speed tests
         if (byte > 128) return 0
         if (byte > 64) return 1
         if (byte > 32) return 2
@@ -16,9 +17,13 @@ export default class ByteReader {
         if (byte > 1) return 7
     }
 
-    read() { return this.file[this.head++] } // twice as slow as direct access
-    isEmpty() { return this.head >= this.file.length }
-    peek() { return this.file[this.head] }
+    read() { return this.bytes[this.head++] } // twice as slow as direct access
+    isEmpty() { return this.head >= this.bytes.length }
+    peek() { return this.bytes[this.head] }
+
+    pastMarker() { this.head >= this.markers.slice(-1).pop() }
+    setMarker(marker) { this.markers.push(marker) }
+    popMarker() { return this}
 
 }
 
