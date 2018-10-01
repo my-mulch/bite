@@ -23,7 +23,7 @@ export default class ByteReader {
 
     pastMarker() { return this.head >= this.markers[this.markers.length - 1] ? false : this.markers.pop() }
     setMarker(marker) { this.markers.push(marker) }
-    popMarker() { return this }
+    popMarker() { return this.markers.pop() }
 
 }
 
