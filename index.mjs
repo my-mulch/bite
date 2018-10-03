@@ -4,6 +4,7 @@ export default class ByteReader {
 
     constructor(props) {
         this.bytes = props.bytes
+        this.length = bytes.length
         this.head = 0
     }
 
