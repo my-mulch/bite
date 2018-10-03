@@ -17,4 +17,3 @@ export default class ByteUtils {
         return string + String.fromCharCode(byte)
     }
 }
-

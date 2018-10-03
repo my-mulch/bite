@@ -1,4 +1,4 @@
-import ByteUtils from './utils'
+import ByteUtils from './utils/byte'
 
 export default class ByteReader {
 
