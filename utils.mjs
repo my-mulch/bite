@@ -1,5 +1,5 @@
 
-class ByteUtils {
+export default class ByteUtils {
     static leadZ(byte) {
         if (byte >= 128) return 0
         if (byte >= 64) return 1
@@ -9,7 +9,7 @@ class ByteUtils {
         if (byte >= 4) return 5
         if (byte >= 2) return 6
         if (byte >= 1) return 7
-        
+
         return 8
     }
 }
