@@ -14,7 +14,6 @@ export default class ByteReader {
 
     extract(vint) { return this.bytes.slice(...vint) }
     advance(marker) { return [this.head, this.head += marker] }
-
 }
 
 ByteReader.utils = ByteUtils
