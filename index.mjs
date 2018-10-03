@@ -1,3 +1,5 @@
+import ByteUtils from './utils'
+
 export default class ByteReader {
 
     constructor(props) {
@@ -10,4 +12,4 @@ export default class ByteReader {
     peek() { return this.bytes[this.head] }
 }
 
-
+ByteReader.utils = ByteUtils
