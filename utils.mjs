@@ -12,5 +12,9 @@ export default class ByteUtils {
 
         return 8
     }
+
+    static toString(string, byte) {
+        return string + String.fromCharCode(byte)
+    }
 }
 
