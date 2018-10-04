@@ -15,6 +15,7 @@ export default class ByteReader {
     extract(start, end) { return this.bytes.slice(start, end) }
     advance(marker) { return this.head += marker }
     rewind(marker) { return this.head -= marker }
+    seek(marker) { return this.head = marker }
 }
 
 ByteReader.utils = ByteUtils
