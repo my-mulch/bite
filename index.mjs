@@ -12,8 +12,9 @@ export default class ByteReader {
     isEmpty() { return this.head >= this.bytes.length }
     peek() { return this.bytes[this.head] }
 
-    extract(vint) { return this.bytes.slice(...vint) }
-    advance(marker) { return [this.head, this.head += marker] }
+    extract(start, end) { return this.bytes.slice(start, end) }
+    advance(marker) { return this.head += marker }
+    rewind(marker) { return this.head -= marker }
 }
 
 ByteReader.utils = ByteUtils
